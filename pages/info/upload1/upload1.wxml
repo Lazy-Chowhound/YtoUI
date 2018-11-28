@@ -1,0 +1,9 @@
+
+<view class="weui-tab__content_title" >
+
+      <text style='padding-left: 17px;'>请选择待上传的文件</text>
+
+</view>
+
+  <button type="primary"   bindtap="upload"> 上传文件 </button>
+
