@@ -1,27 +1,73 @@
-var sliderWidth = 96; // 需要设置slider的宽度，用于计算中间位置
-
 Page({
   data: {
-    tabs: ["通知", "公告"],
-    activeIndex: 0,
-    sliderOffset: 0,
-    sliderLeft: 0
+    delBtnWidth: 160,
+    data: [{ name: '通知1', time: '2018/11', path: "information", icon: "inform.jpg" }, { name: '通知2', time: '2018/12', path: "information", icon: "inform.jpg" }, { name: '通知3', time: '2019/1', path: "information", icon: "inform.jpg" }],
+    isScroll: true,
+    windowHeight: 0,
   },
-  onLoad: function () {
+  onLoad: function (options) {
     var that = this;
     wx.getSystemInfo({
       success: function (res) {
         that.setData({
-          sliderLeft: (res.windowWidth / that.data.tabs.length - sliderWidth) / 2,
-          sliderOffset: res.windowWidth / that.data.tabs.length * that.data.activeIndex
+          windowHeight: res.windowHeight
         });
       }
     });
   },
-  tabClick: function (e) {
+  drawStart: function (e) {
+    var touch = e.touches[0]
+
+    for (var index in this.data.data) {
+      var item = this.data.data[index]
+      item.right = 0
+    }
     this.setData({
-      sliderOffset: e.currentTarget.offsetLeft,
-      activeIndex: e.currentTarget.id
-    });
+      data: this.data.data,
+      startX: touch.clientX,
+    })
+
+  },
+  drawMove: function (e) {
+    var touch = e.touches[0]
+    var item = this.data.data[e.currentTarget.dataset.index]
+    var disX = this.data.startX - touch.clientX
+
+    if (disX >= 20) {
+      if (disX > this.data.delBtnWidth) {
+        disX = this.data.delBtnWidth
+      }
+      item.right = disX
+      this.setData({
+        isScroll: false,
+        data: this.data.data
+      })
+    } else {
+      item.right = 0
+      this.setData({
+        isScroll: true,
+        data: this.data.data
+      })
+    }
+  },
+  drawEnd: function (e) {
+    var item = this.data.data[e.currentTarget.dataset.index]
+    if (item.right >= this.data.delBtnWidth / 2) {
+      item.right = this.data.delBtnWidth
+      this.setData({
+        isScroll: true,
+        data: this.data.data,
+      })
+    } else {
+      item.right = 0
+      this.setData({
+        isScroll: true,
+        data: this.data.data,
+      })
+    }
+  },
+
+  delItem: function (e) {
+
   }
-});
+})

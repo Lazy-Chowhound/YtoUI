@@ -15,5 +15,10 @@ Page({
   },
   onUnload:function(){
     // 页面关闭
+  },
+  return:function(){
+    wx.navigateBack({
+      delta:1
+    })
   }
 })

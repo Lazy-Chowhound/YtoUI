@@ -29,7 +29,6 @@
         </view>
       </view>
 
-
       <view class="page-section">
 
         <view class="weui-cell weui-cell_input">
@@ -53,7 +52,6 @@
           <button type="info" bindtap="relocate" loading="{{loading}}">{{UI[uindex].locButton}}</button>
         </view>
       </view>
-
     </view>
 
     <view class="btn-area" id="buttonContainer">

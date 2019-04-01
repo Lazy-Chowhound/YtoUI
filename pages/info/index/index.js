@@ -3,12 +3,11 @@ Page({
   data:{
     grids: [
       {name:'考评', path: "salary", icon: "salary.png"}, 
-      {name:'组织', path: "salary", icon: "diagram.png"}, 
+      {name:'成员', path: "organization", icon: "diagram.png"}, 
       {name:'公告', path: "inform", icon: "megaphone.png"},
-      {name:'上传文件', path: "upload1", icon: "presentation.png"}] 
-      //{name:'KPI', path: "salary", icon: "graph.png"}, 
-      //{name:'门禁', path: "salary", icon: "credit-card.png"}, 
-      //{name:'密码', path: "salary", icon: "check.png"}]
+      {name:'上传文件', path: "upload1", icon: "presentation.png"},
+      {name:'密码', path: "test", icon: "password.png"},
+      {name:'我的',path:"myinfo",icon:"myself.png"}]
   },
   onLoad:function(options){
   },

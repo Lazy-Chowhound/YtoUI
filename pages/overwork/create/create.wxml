@@ -57,12 +57,10 @@
 
       <view class="btn-area">
         <button type="primary" formType="submit">{{UI[uindex].save}}</button>
-        <!--<button formType="reset">Reset</button>-->
       </view>
 
 
     </view>
     </view>
   </form>
-  <!--<template is="foot" />-->
 </view>

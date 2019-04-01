@@ -1,14 +1,60 @@
-//@import "../../common/lib/weui.wxss";
+@import "../../common/lib/weui.wxss";
+.label{
+  font-size: 20px;
+  color: black;
+  margin: 5px;
+  border:0;
+  border-radius:5px;
+  background-color:rgba(241,241,241,.98);
+  width: auto;
+  height: 35px;
+  resize: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.hint{
+  text-align: center;
+}
+      
 .weui-tab__content_title{
   height: 50%;
-  width:100%;
-  font-size: 25px;
-  color:grey;
-    display: flex;    /*设置显示样式**/
-    align-items: center;    /**子view垂直居中*/
-    vertical-align: center; /**垂直居中*/
-    justify-content: center; /**内容居中*/
-     flex-direction:row; /*子view排列方式row--水平 column--垂直 */
-
+  margin: 20rpx;
+  font-size: 20px;
+  color:black;
 }
+
+.content{
+  border:0;
+  border-radius:5px;
+  background-color:rgba(241,241,241,.98);
+  width: auto;
+  height: 100%;
+  resize: none;
+  display: flex;
+  text-align: center;
+}
+
+.btnImg {
+  margin-right: 8rpx;
+  width: 46rpx;
+  height: 46rpx;
+}
+
+.button{
+  margin-top: 40rpx;
+  width: 60%;
+  height: 8%;
+  background-color: burlywood;
+  color: white;
+  border-radius: 98rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+      

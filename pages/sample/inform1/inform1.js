@@ -9,8 +9,7 @@ Page({
     wx.request({
       url: 'https://www.v2ex.com/api/topics/hot.json',
       data: {},
-      method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
-      // header: {}, // 设置请求的 header
+      method: 'GET', 
       success: function (res) {
         // success
         console.log(res.data)

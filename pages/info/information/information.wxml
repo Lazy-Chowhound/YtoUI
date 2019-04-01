@@ -1,15 +1,14 @@
-通知
 <view class="page">
-    <view class="page__hd">
-        <view class="page__title">2018/11/11</view>
-        <view class="page__desc">双十一物流高峰预警</view>
+  <view class="notice">通    知</view>
+  <view class="page__hd">
+    <view class="page__title">2018/11/11</view>
+      <view class="page__desc">双十一物流高峰预警</view>
+    </view>              
+    <view class="weui-form-preview__ft">
+      <navigator url="../inform/inform" class="weui-form-preview__btn weui-form-preview__btn_primary" hover-class="weui-form-preview__btn_active">返回</navigator>
     </view>
-   
-            
-            <view class="weui-form-preview__ft">
-                <navigator url="../../sample/inform1/inform1" class="weui-form-preview__btn weui-form-preview__btn_primary" hover-class="weui-form-preview__btn_active">返回</navigator>
-            </view>
-        
-        
-    
+    <view class="weui-form-preview__ft">
+      <navigator url="../feedback/feedback" class="weui-form-preview__btn weui-form-preview__btn_primary" hover-class="weui-form-preview__btn_active">留言</navigator>
+    </view>
+    <view class="read">已读XX人</view>
 </view>

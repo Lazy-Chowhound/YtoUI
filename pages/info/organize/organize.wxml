@@ -1,0 +1,26 @@
+<view class='table'>
+  <view class='tr'>
+    <view class='th'>姓名</view>
+    <view class='th'>性别</view>
+    <view class='th'>年龄</view>
+    <view class='th'>电话</view>
+    <view class='th'>工号</view>
+  </view>
+  <view class='tr'>
+    <view class='td'><input type="text" placeholder="张三" placeholder-class="placeholder" bindinput="inputContent" /></view>
+    <view class='td'><input type="text" placeholder="男" placeholder-class="placeholder" bindinput="inputContent" /></view>
+    <view class='td'><input type="text" placeholder="33" placeholder-class="placeholder" bindinput="inputContent" /></view>
+    <view class='td'><input type="text" placeholder="10076" placeholder-class="placeholder" bindinput="inputContent" /></view>
+    <view class='td'><input type="text" placeholder="B16412" placeholder-class="placeholder" bindinput="inputContent" /></view>
+  </view>
+  <view class='tr'>
+    <view class='td'>李四</view>
+    <view class='td'>男</view>
+    <view class='td'>44</view>
+    <view class='td'>10089</view>
+    <view class='td'>B160404</view>
+  </view>
+</view>
+<view class="weui-form-preview__ft">
+  <navigator url="../organization/organization" class="weui-form-preview__btn weui-form-preview__btn_primary" hover-class="weui-form-preview__btn_active" bindtap='save'>保存 </navigator>
+</view>

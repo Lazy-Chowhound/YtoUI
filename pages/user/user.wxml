@@ -1,4 +1,4 @@
-<!--pages/user/user.wxml-->
+<!-- pages/user/user.wxml
 <!-- 绑定员工号页面 -->
 <view class="container">        
     <view class="form-wrap">
@@ -15,4 +15,4 @@
             <button class="submit" type="primary" bindtap="save">绑定</button>               
         </view>        
     </view>       
-</view>
+</view> 

@@ -55,8 +55,6 @@
   align-items: center;
 }
 
-/*UI after click the button*/
-
 .weui-search-bar {
   position: relative;
   padding: 8px 10px;
@@ -115,8 +113,6 @@
 .weui-cell_active {
   background: #eee;
 }
-
-/* searchbar */
 
 .list {
   width: 750rpx;

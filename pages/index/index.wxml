@@ -5,8 +5,6 @@
 
 <view class="container">
 
-<!--<template is="head" data="{{title: 'main'}}"/>-->
-
 <view class="userinfo">
     <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
     <text class="userinfo-nickname">{{UI[uindex].greeting}}\n{{userInfo.nickName}}</text>
@@ -23,12 +21,6 @@
           </view>
           <view class="kind-list-item-bd {{item.open ? 'kind-list-item-bd-show' : ''}}">
             <view class="navigator-box {{item.open ? 'navigator-box-show' : ''}}">
-              <!--<block wx:for-items="{{item.pages}}" wx:for-item="page" wx:key="*item">
-                <navigator url="pages/{{page}}/{{page}}" class="navigator">
-                  <view class="navigator-text">{{page}}</view>
-                  <view class="navigator-arrow"></view>
-                </navigator>
-              </block>-->
               <block wx:for-items="{{item.pages}}" wx:for-item="page" wx:key="*item">
                 <navigator url="../{{item.id}}/{{page.path}}/{{page.path}}" class="navigator">
                   <view class="navigator-text">{{page.title[uindex]}}</view>
@@ -42,9 +34,5 @@
     </view>
   </view>
 </view>
-
-  
-  <view class="usermotto">
-    <!--<text class="user-motto">{{motto}}</text>-->
-  </view>
+  <view class="usermotto"></view>
 </view>

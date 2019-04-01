@@ -13,6 +13,5 @@
                 </view>
             </view>
         </view>
-    <!--<image class="list-btn qr-little" src="../../images/qrcode_little.png" bindtap="openActionSheet" data-code="{{item.CodeImgPath}}"></image>-->
     </view>
 </scroll-view>

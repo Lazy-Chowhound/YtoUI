@@ -1,0 +1,7 @@
+<!-- 反馈页面 -->
+<view class="weui-tab__content_title" > 
+  <textarea placeholder="请输入内容" placeholder-class="placeholder" bindinput="inputContent" />
+</view>
+<view class="button">
+<button type="primary" bindtap="save">确定</button>
+</view>

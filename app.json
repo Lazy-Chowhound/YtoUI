@@ -14,17 +14,22 @@
     "pages/info/payment/payment",
     "pages/info/inform/inform",
     "pages/info/information/information" ,
-    "pages/info/upload1/upload1"
+    "pages/info/upload1/upload1",
+    "pages/info/organization/organization",
+    "pages/info/test/test",
+    "pages/info/feedback/feedback",
+    "pages/info/organize/organize",
+    "pages/info/myinfo/myinfo"
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#006df0",
+    "navigationBarBackgroundColor": "#B2DFFF",
     "navigationBarTitleText": "圆通速递",
     "navigationBarTextStyle":"white"
   },
   "tabBar": {
     "color": "#7A7E83",
-    "selectedColor": "#006df0",
+    "selectedColor": "#63B8FF",
     "borderStyle": "black",
     "backgroundColor": "#ffffff",
     "list": [{
@@ -50,5 +55,10 @@
     "uploadFile": 10000,
     "downloadFile": 10000
   },
-  "debug": false
+  "debug": false,
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将被使用"
+    }
+  }
 }

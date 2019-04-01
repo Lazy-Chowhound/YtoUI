@@ -66,7 +66,7 @@ Page({
   formSubmit: function (e) {
     wx.showModal({
       title: '提示',
-      content: '这是一个模态弹窗',
+      content: '保存成功',
       success: function(res) {
         if (res.confirm) {
           console.log('用户点击确定')

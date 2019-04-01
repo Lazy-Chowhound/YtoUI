@@ -44,6 +44,5 @@
   height: 1px;
   border-bottom: 1rpx solid #E5E5E5;
   color: #E5E5E5;
-  left: 15px;
 }
 

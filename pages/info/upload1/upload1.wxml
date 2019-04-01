@@ -1,9 +1,16 @@
-
-<view class="weui-tab__content_title" >
-
-      <text style='padding-left: 17px;'>请选择待上传的文件</text>
-
-</view>
-
-  <button type="primary"   bindtap="upload"> 上传文件 </button>
+  <view class="label">
+    <input type="text" placeholder="请输入标题" placeholder-class="hint" bindinput="inputTitle"/>
+  </view>
+  <view class="weui-tab__content_title" > 
+    <textarea class="content" placeholder="请输入内容" placeholder-class="hint" bindinput="inputContent" />
+  </view>
+  <button class="button"  bindtap="upload"> 
+    <image class='btnImg' src='../../../../../image/appendix.png'></image>
+    <text>添加附件</text>
+  </button>
+  <button class="button"  bindtap="save">
+    <image class='btnImg' src='../../../../../image/upload.png'></image>
+    <text decode='true'>上&emsp;&emsp;传</text>
+  </button>
+    
 

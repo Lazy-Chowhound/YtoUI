@@ -1,83 +1,86 @@
+/* pages/info/payment/payment.wxss */
 @import "../../common/lib/weui.wxss";
 
-page,
-.page,
-.page__bd{
-    height: 100%;
+.order-item {
+  position:relative;
+  width: 100%;
 }
-.page__bd{
-    padding-bottom: 0;
+
+.remove{  
+  width: 160rpx;  
+  height: 100%;  
+  background-color: red; 
+  color: white; 
+  position: absolute;  
+  top: 0;  
+  right: -160rpx;  
+  display: flex;  
+  justify-content: center;  
+  align-items: center;  
+} 
+
+.weui-form-preview{
+    margin-bottom: 25px;
 }
-.weui-tab__content{
-    padding-top: 60px;
+
+page{
+    background-color: #F8F8F8;
+    font-size: 16px;
+    font-family: -apple-system-font,Helvetica Neue,Helvetica,sans-serif;
+}
+
+.page__hd {
+  margin-top: 30rpx;
+  text-align: center;
+  margin-bottom: 30rpx;
+}
+
+.page__bd_spacing {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.page__ft{
+    padding-bottom: 10px;
     text-align: center;
 }
 
-.weui-navbar__slider {
-    background-color:#fff !important;
+.page__title {
+    font-size: 20px;
+    font-weight: 400;
+    font-family: STCaiyun
 }
 
-.weui-navbar__item {
-    color: lightgrey;
+.page__desc {
+    margin-top: 5px;
+    color: #888888;
+    text-align: left;
+    font-size: 14px;
 }
 
-.weui-navbar__item.weui-bar__item_on {
-    color: white;
+.weui-grid__icon {
+  display: block;
+  width: 42px !important;
+  height: 42px !important;
+  margin: 0 auto;
 }
 
-.weui-navbar {
-    /*border-bottom:1rpx solid;*/
-    background-color: #006df0;
-}
-
-.weui-tab__content {
-    padding-top: 0 !important;
-}
-
-
-.weui-panel {
-  background-color: #FFFFFF;
-  margin-top: 10px;
-  position: relative;
+.weui-grids {
+  border-top: 1rpx solid #D9D9D9;
+  border-left: 1rpx solid #D9D9D9;
   overflow: hidden;
 }
-.weui-panel:first-child {
-  margin-top: 0;
-}
-.weui-panel:before {
-  content: " ";
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  height: 1px;
-  border-top: 1rpx solid #E5E5E5;
-  color: #E5E5E5;
-}
-.weui-panel:after {
-  content: " ";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  height: 1px;
-  border-bottom: 1rpx solid #E5E5E5;
-  color: #E5E5E5;
-}
-.weui-panel__hd {
-  padding: 14px 15px 10px;
-  color: #999999;
-  font-size: 13px;
+
+.weui-grid {
   position: relative;
+  float: left;
+  padding: 20px 10px;
+  width: 100%;
+  box-sizing: border-box;
+  border-right: 1rpx solid #D9D9D9;
+  border-bottom: 1rpx solid #D9D9D9;
 }
-.weui-panel__hd:after {
-  content: " ";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  height: 1px;
-  border-bottom: 1rpx solid #E5E5E5;
-  color: #E5E5E5;
-  left: 15px;
-}
+
+
+
+

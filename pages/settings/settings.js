@@ -40,7 +40,6 @@ Page({
       status = true 
     }
 
-
     this.setData({      
       index: selectedLanguage,
       employeeId: employeeId,

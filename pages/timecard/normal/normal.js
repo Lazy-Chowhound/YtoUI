@@ -101,7 +101,6 @@ Page({
     var that = this;
     var ui = that.data.UI
     var amap = new amapFile.AMapWX({key:'8ebbe699d71eed6674889848604e411a'});
-    
     amap.getRegeo({      
       success: function(data){
         console.log(data)
