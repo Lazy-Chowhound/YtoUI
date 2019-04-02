@@ -14,6 +14,8 @@ Page({
     // 页面隐藏
   },
   onUnload: function () {
-    // 页面关闭
+    wx.switchTab({
+      url: '../index/index',
+    })
   }
 })

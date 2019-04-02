@@ -56,10 +56,8 @@
       </view>      
 
       <view class="btn-area">
-        <button type="primary" formType="submit">{{UI[uindex].save}}</button>
+        <button class='btn' formType="submit" plain='true'>{{UI[uindex].save}}</button>
       </view>
-
-
     </view>
     </view>
   </form>

@@ -32,7 +32,7 @@
       </view>
 
     <view class="btn-area" id="buttonContainer">
-      <button bindtap="save" type="primary">{{UI[index].save}}</button>
+      <button class='save_btn' bindtap="save">{{UI[index].save}}</button>
     </view>
   </view>   
 </view>

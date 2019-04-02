@@ -10,12 +10,12 @@ Page({
     userInfo: {},
     employeeId: '',
     inputStatus: false,
-    languages: ["简体中文", "English", "日本語"], // "繁体中文", "日本語" may be supported in the future
-    index: 0,                                    // current default selected item
+    languages: ["简体中文", "English", "日本語"], 
+    index: 0,                                  
     UI: [ 
-      {title: "设置", language: "选择语言", currentLan: "当前选择", employeeIdTitle: "雇员编号", currentId: "如有疑问请联系人事部门", employeeId: 'EMP10086RD', save: "保存", accountMg: "账户管理", bind: "绑定COMPANY账户", unbind: "解除绑定", unbindMsgTitle: "解除账户绑定" , unbindMsgContent: "我已知晓解除与COMPANY账户的绑定后，将导致部分功能不可用。"},
+      {title: "设置", language: "选择语言", currentLan: "当前选择", employeeIdTitle: "雇员编号", currentId: "如有疑问请联系人事部门", employeeId: 'EMP10086RD', save: "保  存", accountMg: "账户管理", bind: "绑定COMPANY账户", unbind: "解除绑定", unbindMsgTitle: "解除账户绑定" , unbindMsgContent: "我已知晓解除与COMPANY账户的绑定后，将导致部分功能不可用。"},
       {title: "Settings", language: "Change Language", currentLan: "Current", employeeIdTitle: "Employee ID", currentId: "Contact HR Dept.", employeeId: 'EMP10086RD', save: "Save Changes", accountMg: "Account Manage", bind: "Bind with COMPANY ID", unbind: "Unbind COMPANY ID", unbindMsgTitle: "Unbind Account" , unbindMsgContent: "I am aware unbinding COMPANY ID will cause some features to be unavailable."},
-      {title: "設定", language: "言語変更", currentLan: "選択項目", employeeIdTitle: "社員番号", currentId: "人事部に連絡してください.", employeeId: 'EMP10086RD', save: "保存", accountMg: "账户管理", bind: "绑定COMPANY账户", unbind: "解除绑定", unbindMsgTitle: "解除账户绑定" , unbindMsgContent: "我已知晓解除与COMPANY账户的绑定后，将导致部分功能不可用。"}
+      {title: "設定", language: "言語変更", currentLan: "選択項目", employeeIdTitle: "社員番号", currentId: "人事部に連絡してください.", employeeId: 'EMP10086RD', save: "保  存", accountMg: "账户管理", bind: "绑定COMPANY账户", unbind: "解除绑定", unbindMsgTitle: "解除账户绑定" , unbindMsgContent: "我已知晓解除与COMPANY账户的绑定后，将导致部分功能不可用。"}
       ]
   },
   bindPickerChange: function(e) {
@@ -23,7 +23,6 @@ Page({
     this.setData({
       index: e.detail.value
     })
-    
     //储存用户对语言的选择
     try {
       wx.setStorageSync('selectedLanguage', e.detail.value);
@@ -36,10 +35,10 @@ Page({
     // 设置app语言的全局变量
     var selectedLanguage = app.globalData.settings.language;
     var employeeId = app.globalData.settings.employeeId;
+    var status = null;
     if(employeeId !== null){
       status = true 
     }
-
     this.setData({      
       index: selectedLanguage,
       employeeId: employeeId,
@@ -94,7 +93,6 @@ Page({
         if (res.confirm) {
           console.log(AV.User.current());
           AV.User.logOut().then(console.log('Log out'));
-          
           console.log(AV.User.current());
           that.setData({
             user: AV.User.current()

@@ -1,9 +1,14 @@
 <!-- 信息 -->
 <view class="page">
+<view class="front">
     <view class="page__hd">
         <view class="page__title">圆通速递</view>
         <view class="page__desc">信息资讯</view>
     </view>
+    <view class="brand">
+      <image class="icon" src='../../../image/icon.png'></image>
+    </view> 
+  </view> 
     <view class="page__bd">
         <view class="weui-grids">
             <view wx:for="{{grids}}" wx:item="*this">

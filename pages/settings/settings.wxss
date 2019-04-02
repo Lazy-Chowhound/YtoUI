@@ -31,3 +31,10 @@
   line-height: 46px;
 }
 
+.save_btn{ 
+  width:220px;
+	border-radius: 50px;
+  color: white;
+	background: #1E90FF;
+	font-size: 20px; 
+}

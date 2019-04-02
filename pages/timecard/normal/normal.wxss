@@ -20,3 +20,9 @@
   /*color: #006df0;*/
   align-self: center;
 }
+
+.btn{
+  font-family: STCaiyun;
+  border-radius: 30px;
+  width:250px;
+}

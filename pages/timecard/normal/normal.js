@@ -24,7 +24,7 @@ Page({
     loading: false, // 更新地理位置加载状态
     checkMode: {},
     UI: [
-      {checkType: "打卡目的", current: "当前选择", locName: "位置名称", locDesc: "详细位置", locNameContent: "等待获取", locDescContent: "等待获取", locButton: "更新定位", submitButton: "提交"},
+      { checkType: "打卡目的", current: "当前选择", locName: "位置名称", locDesc: "详细位置", locNameContent: "等待获取", locDescContent: "等待获取", locButton: "更新定位", submitButton: "提交"},
       {checkType: "Type", current: "Current", locName: "Location", locDesc: "Detail", locNameContent: "Waiting", locDescContent: "Waiting", locButton: "Update Location", submitButton: "Submit"},
       {checkType: "打刻種類", current: "選択項目", locName: "現在場所", locDesc: "詳細位置", locNameContent: "取得待ち", locDescContent: "取得待ち", locButton: "場所再取得", submitButton: "打刻"}
       ]

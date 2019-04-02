@@ -55,7 +55,7 @@
     </view>
 
     <view class="btn-area" id="buttonContainer">
-      <button formType="submit" type="primary">{{UI[uindex].submitButton}}</button>
+      <button class='btn' formType="submit" plain='true' decode='true'>{{UI[uindex].submitButton}}</button>
     </view>
   </form>
   </view>
