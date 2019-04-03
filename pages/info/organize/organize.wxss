@@ -15,6 +15,7 @@
   background: rgb(236, 230, 230);
   font-size: 14x;
   color: #00f;
+  font-family: YouYuan;
 }
 
 .th,.td{

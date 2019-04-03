@@ -1,6 +1,10 @@
 
 Page({
-  data: {},
+  data: {
+    title:'2018/11/11',
+    content:'双十一物流高峰预警',
+    num:'0'
+  },
   onLoad: function (options) {
     // 页面初始化 options为页面跳转所带来的参数
   },

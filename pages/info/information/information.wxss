@@ -56,6 +56,6 @@ page{
   margin-top: 10rpx;
   text-align: center;
   color:grey;
-  text-decoration-line: underline;
+  text-decoration:underline;
   font-size: 14px;
 }

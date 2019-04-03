@@ -8,7 +8,7 @@
             <input value="{{user.username}}" bindinput="updateEmpid" id="username" class="account-info-input"/>
         </view>
         <view class="flex-wrap input-wrap">
-            <text class="label">密码</text>
+            <text class="label" decode='true'>密&emsp;码</text>
             <input password bindinput="updatePassword" id="password" class="account-info-input"/>
         </view>
         <view class="btn-area" id="buttonContainer">        

@@ -21,6 +21,9 @@
     <view class='td'>B160404</view>
   </view>
 </view>
-<view class="weui-form-preview__ft">
+
+<!-- 员工不可修改他人信息 -->
+
+<!-- <view class="weui-form-preview__ft">
   <navigator url="../organize/organize" class="weui-form-preview__btn weui-form-preview__btn_primary" hover-class="weui-form-preview__btn_active">修改    </navigator>
-</view>
+</view> -->
