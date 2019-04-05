@@ -6,15 +6,19 @@
 
 <scroll-view scroll-y="{{isScroll}}" style='height:{{windowHeight}}px'>
   <block wx:key="item" wx:for="{{data}}">
-    <view  data-index='{{index}}' class="order-item" bindtouchstart="drawStart" bindtouchmove="drawMove" bindtouchend="drawEnd" style="right:{{item.right}}rpx">
-         <view class="weui-grids">
-          <navigator url="../{{item.path}}/{{item.path}}" class="weui-grid" hover-class="weui-grid_active">
-                    <image class="weui-grid__icon" src="../../../image/{{item.icon}}" />
-                    <view class="weui-grid__label">{{item.name}}</view>
-                    <view class="weui-grid__label">{{item.time}}</view>
-          </navigator>
-        </view>
-        <view class="remove" bindtap="delItem">删除 </view>
+    <view data-index='{{index}}' class="order-item" bindtouchstart="drawStart" bindtouchmove="drawMove" bindtouchend="drawEnd" style="right:{{item.right}}rpx">
+      <view class="weui-grids">
+        <navigator url="../{{item.path}}/{{item.path}}" class="weui-grid" hover-class="weui-grid_active">
+          <view>
+            <image class="weui-grid__icon" src="../../../image/{{item.icon}}" />
+          </view>
+          <view class="weui-grid__label">
+            <view class="weui-grid__label_title">{{item.name}}</view>
+            <view class="weui-grid__label_time">{{item.time}}</view>
+          </view>
+        </navigator>
+      </view>
+      <view class="remove" bindtap="delItem">删除 </view>
     </view>
   </block>
 </scroll-view>

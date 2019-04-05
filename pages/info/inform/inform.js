@@ -1,7 +1,7 @@
 Page({
   data: {
     delBtnWidth: 160,
-    data: [{ name: '通知1', time: '2018/11', path: "information", icon: "inform.jpg" }, { name: '通知2', time: '2018/12', path: "information", icon: "inform.jpg" }, { name: '通知3', time: '2019/1', path: "information", icon: "inform.jpg" }],
+    data: [{ name: '双十一物流高峰预警', time: '2018/11', path: "information", icon: "inform.jpg" }, { name: '双十一物流高峰预警', time: '2018/12', path: "information", icon: "inform.jpg" }, { name: '双十一物流高峰预警', time: '2019/1', path: "information", icon: "inform.jpg" }],
     isScroll: true,
     windowHeight: 0,
   },

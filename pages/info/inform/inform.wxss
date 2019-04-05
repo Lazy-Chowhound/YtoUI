@@ -1,9 +1,56 @@
 /* pages/info/payment/payment.wxss */
 @import "../../common/lib/weui.wxss";
+page{
+    background-color: #F8F8F8;
+    font-size: 16px;
+    font-family: -apple-system-font,Helvetica Neue,Helvetica,sans-serif;
+}
+
+.page__hd {
+  margin-top: 30rpx;
+  text-align: center;
+  margin-bottom: 30rpx;
+}
+
+.page__title {
+    font-size: 20px;
+    font-weight: 400;
+    font-family: STCaiyun
+}
 
 .order-item {
   position:relative;
   width: 100%;
+}
+
+.weui-grids {
+  border-top: 1rpx solid #D9D9D9;
+  border-left: 1rpx solid #D9D9D9;
+  overflow: hidden;
+  text-align: center;
+}
+
+.weui-grid {
+  width: 100%;
+  box-sizing: border-box;
+  border-right: 1rpx solid #D9D9D9;
+  border-bottom: 1rpx solid #D9D9D9;
+  display: flex;
+  flex-direction: row;  
+}
+
+.weui-grid__icon {
+  width: 42px !important;
+  height: 42px !important;
+  margin-left: 40rpx;
+}
+
+.weui-grid__label{
+  margin-left: 70rpx;
+}
+
+.weui-grid__label_title{
+  font-size: 43rpx;
 }
 
 .remove{  
@@ -17,70 +64,6 @@
   display: flex;  
   justify-content: center;  
   align-items: center;  
-} 
-
-.weui-form-preview{
-    margin-bottom: 25px;
 }
-
-page{
-    background-color: #F8F8F8;
-    font-size: 16px;
-    font-family: -apple-system-font,Helvetica Neue,Helvetica,sans-serif;
-}
-
-.page__hd {
-  margin-top: 30rpx;
-  text-align: center;
-  margin-bottom: 30rpx;
-}
-
-.page__bd_spacing {
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-.page__ft{
-    padding-bottom: 10px;
-    text-align: center;
-}
-
-.page__title {
-    font-size: 20px;
-    font-weight: 400;
-    font-family: STCaiyun
-}
-
-.page__desc {
-    margin-top: 5px;
-    color: #888888;
-    text-align: left;
-    font-size: 14px;
-}
-
-.weui-grid__icon {
-  display: block;
-  width: 42px !important;
-  height: 42px !important;
-  margin: 0 auto;
-}
-
-.weui-grids {
-  border-top: 1rpx solid #D9D9D9;
-  border-left: 1rpx solid #D9D9D9;
-  overflow: hidden;
-}
-
-.weui-grid {
-  position: relative;
-  float: left;
-  padding: 20px 10px;
-  width: 100%;
-  box-sizing: border-box;
-  border-right: 1rpx solid #D9D9D9;
-  border-bottom: 1rpx solid #D9D9D9;
-}
-
-
 
 
