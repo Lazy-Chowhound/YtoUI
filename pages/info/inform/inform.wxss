@@ -1,9 +1,61 @@
 /* pages/info/payment/payment.wxss */
 @import "../../common/lib/weui.wxss";
+.page_row{  
+  margin-top: 10rpx;
+  display: flex;  
+  flex-direction: row  
+}  
+
+.search{  
+  width: 80%;  
+}  
+
+.search_arr {  
+  margin-left: 20rpx;  
+  font-size: 20px;
+  color: black;
+  margin: 5px;
+  border:0;
+  border-radius:5px;
+  background-color:rgba(241,241,241,.98);
+  width: auto;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}  
+
+.search_arr input{  
+  margin-left: 60rpx;  
+  height: 80rpx;  
+  border-radius: 5px;  
+} 
+      
+.find{  
+  margin-left: 10rpx;  
+  width: 17%;
+  height:70rpx;   
+  border: 1px solid #d0d0d0;  
+  border-radius: 20rpx;  
+  font-size: 30rpx;
+}
+   
+.searchcion {  
+  margin: 10rpx 10rpx 10rpx 10rpx;    
+  left:25rpx;  
+  z-index:2;  
+  width: 5px;  
+  height: 20px;  
+} 
+
+.placeholder{
+  font-size: 40rpx;
+}
+
 page{
-    background-color: #F8F8F8;
-    font-size: 16px;
-    font-family: -apple-system-font,Helvetica Neue,Helvetica,sans-serif;
+  background-color: #F8F8F8;
+  font-size: 16px;
+  font-family: -apple-system-font,Helvetica Neue,Helvetica,sans-serif;
 }
 
 .page__hd {
@@ -13,9 +65,9 @@ page{
 }
 
 .page__title {
-    font-size: 20px;
-    font-weight: 400;
-    font-family: STCaiyun
+  font-size: 20px;
+  font-weight: 400;
+  font-family: STCaiyun
 }
 
 .order-item {

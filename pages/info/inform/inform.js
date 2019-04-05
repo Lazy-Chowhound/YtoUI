@@ -69,5 +69,9 @@ Page({
 
   delItem: function (e) {
 
+  },
+
+  search_inform:function(){
+
   }
 })
