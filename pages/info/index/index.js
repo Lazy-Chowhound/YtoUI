@@ -1,4 +1,3 @@
-// pages/sample/index/index.js
 Page({
   data:{
     grids: [
@@ -6,8 +5,14 @@ Page({
       {name:'成员', path: "organization", icon: "diagram.png"}, 
       {name:'公告', path: "inform", icon: "megaphone.png"},
       {name:'上传文件', path: "upload1", icon: "presentation.png"},
-      {name:'密码', path: "test", icon: "password.png"},
-      {name:'我的',path:"myinfo",icon:"myself.png"}]
+      {name:'考勤', path: "attend", icon: "attendance.png"},
+      {name:'我的',path:"myinfo",icon:"myself.png"}
+    ],
+    inform:[
+      {content:"双十一高峰预警"},
+      {content: "双十二高峰预警"},
+      {content: "没有双十三预警"}
+    ]
   },
   onLoad:function(options){
   },
@@ -22,5 +27,10 @@ Page({
   },
   onUnload:function(){
     // 页面关闭
+  },
+  toInform:function(){
+    wx.navigateTo({
+      url: '../inform/inform',
+    })
   }
 })

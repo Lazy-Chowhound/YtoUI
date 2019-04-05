@@ -1,6 +1,6 @@
 {
   "pages":[
-    "pages/index/index",
+    "pages/info/index/index",
     "pages/logs/logs",
     "pages/user/user",
     "pages/settings/settings",
@@ -9,7 +9,6 @@
     "pages/overwork/create/create",   
     "pages/sample/index/index",
     "pages/sample/inform1/inform1",
-    "pages/info/index/index",
     "pages/info/salary/salary",
     "pages/info/payment/payment",
     "pages/info/inform/inform",
@@ -19,7 +18,8 @@
     "pages/info/test/test",
     "pages/info/feedback/feedback",
     "pages/info/organize/organize",
-    "pages/info/myinfo/myinfo"
+    "pages/info/myinfo/myinfo",
+    "pages/info/attend/attend"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -32,12 +32,7 @@
     "selectedColor": "#63B8FF",
     "borderStyle": "black",
     "backgroundColor": "#ffffff",
-    "list": [{
-      "pagePath": "pages/index/index",
-      "iconPath": "image/icon_CSR.png",
-      "selectedIconPath": "image/icon_CSR_HL.png",
-      "text": "考勤"
-    }, {
+    "list": [ {
       "pagePath": "pages/info/index/index",
       "iconPath": "image/icon_CWS.png",
       "selectedIconPath": "image/icon_CWS_HL.png",
