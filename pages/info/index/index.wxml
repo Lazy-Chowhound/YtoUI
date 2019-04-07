@@ -22,7 +22,7 @@
   </view>
   <view class="mySwiper"> 
     <view class='divide'></view>
-      <swiper class='swiper_item' autoplay='true' vertical='true' circular="true">
+      <swiper class='swiper_item' autoplay='true' vertical='true' circular="true" interval='2000'>
         <block wx:for="{{inform}}" wx:item="*this">
           <swiper-item class="content" bindtap="toInform">
             <text class='inform_content'>{{item.content}}</text>
