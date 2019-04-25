@@ -1,7 +1,6 @@
 /**index.wxss**/
 @import "../../common/index.wxss";
 
-
 .container{
   margin-top: 150px;
 }

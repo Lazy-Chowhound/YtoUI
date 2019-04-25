@@ -1,4 +1,3 @@
-/* pages/info/myinfo/myinfo.wxss */
 @import "../../common/lib/weui.wxss";
 .table{
   border: 1px solid #ccc;

@@ -7,11 +7,13 @@
     <view class='th'>工号</view>
   </view>
   <view class='tr'>
-    <view class='td'><input type="text" placeholder="张三" placeholder-class="placeholder" bindinput="inputContent" /></view>
+    <view class='td'><input type="text" placeholder="张三" placeholder-class="placeholder" bindinput="inputContent"/></view>
     <view class='td'><input type="text" placeholder="男" placeholder-class="placeholder" bindinput="inputContent" /></view>
     <view class='td'><input type="text" placeholder="33" placeholder-class="placeholder" bindinput="inputContent" /></view>
-    <view class='td'><input type="text" placeholder="10076" placeholder-class="placeholder" bindinput="inputContent" /></view>
-    <view class='td'><input type="text" placeholder="B16412" placeholder-class="placeholder" bindinput="inputContent" /></view>
+    <view class='td'><input type="text" placeholder="10076" placeholder-class="placeholder" bindinput="inputContent"/>
+    </view>
+    <view class='td'><input type="text" placeholder="B16412" placeholder-class="placeholder" bindinput="inputContent"/>
+    </view>
   </view>
   <view class='tr'>
     <view class='td'>李四</view>
