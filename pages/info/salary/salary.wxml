@@ -16,33 +16,17 @@
                     <view class="weui-panel weui-panel_access">
                         <view class="weui-panel__hd">图文组合列表</view>
                         <view class="weui-panel__bd">
-                            <navigator url="../../info/payment/payment" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+                          <block wx:key="item" wx:for="{{salary}}">
+                            <navigator url="../../info/payment/payment?month={{item.month}}" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
                                 <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
                                     <image class="weui-media-box__thumb" src="../../../image/salary.png" />
                                 </view>
                                 <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
                                     <view class="weui-media-box__title">月薪</view>
-                                    <view class="weui-media-box__desc">2018/8</view>
+                                    <view class="weui-media-box__desc">{{item.month}}</view>
                                 </view>
                             </navigator>
-                            <navigator url="../../info/payment/payment" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
-                                <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
-                                    <image class="weui-media-box__thumb" src="../../../image/salary.png" />
-                                </view>
-                                <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
-                                    <view class="weui-media-box__title">月薪</view>
-                                    <view class="weui-media-box__desc">2018/9</view>
-                                </view>
-                            </navigator>
-                            <navigator url="../../info/payment/payment" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
-                                <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
-                                    <image class="weui-media-box__thumb" src="../../../image/salary.png" />
-                                </view>
-                                <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
-                                    <view class="weui-media-box__title">月薪</view>
-                                    <view class="weui-media-box__desc">2018/10</view>
-                                </view>
-                            </navigator>
+                           </block>                          
                         </view>
                     </view>
                 </view>
@@ -52,15 +36,17 @@
                     <view class="weui-panel weui-panel_access">
                         <view class="weui-panel__hd">图文组合列表</view>
                         <view class="weui-panel__bd">
-                            <navigator url="../../info/payment/payment" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+                        <block wx:key="item" wx:for="{{bonus}}">
+                            <navigator url="../../info/bonus/bonus?month={{item.month}}" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
                                 <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
                                     <image class="weui-media-box__thumb" src="../../../image/bonus.png" />
                                 </view>
                                 <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
                                     <view class="weui-media-box__title">季度奖金</view>
-                                    <view class="weui-media-box__desc">2018/11</view>
+                                    <view class="weui-media-box__desc">{{item.month}}</view>
                                 </view>
                             </navigator>
+                          </block>
                         </view>
                     </view>
                 </view>

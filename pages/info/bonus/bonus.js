@@ -1,8 +1,8 @@
 Page({
-  data:{
-    salary: [{
-      month:'2018/08',
-      employee_number: 'C275', 
+  data: {
+    bonus: [{
+      month: '2018/08',
+      employee_number: 'C275',
       name: "张三",
       basic_salary: "￥12400.00",
       allowance: "￥1800.00",
@@ -12,11 +12,12 @@ Page({
       medical_insurance: "￥120",
       housing_provident_funds: "￥700",
       tax: "￥700",
-      income: "￥1200",}],
+      income: "￥1200",
+    }],
   },
-  onLoad:function(options){
+  onLoad: function (options) {
     wx.request({
-      url: '../yto/info/salary?month='+options.month,
+      url: '../yto/info/bonus?month=' + options.month,
       method: 'GET',
       header: {
         "Content-Type": "application/x-www-form-urlencoded"
@@ -34,10 +35,10 @@ Page({
       }
     })
   },
-  
-  return:function(){
+
+  return: function () {
     wx.navigateBack({
-      delta:1
+      delta: 1
     })
   }
 })

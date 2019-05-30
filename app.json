@@ -19,7 +19,9 @@
     "pages/info/feedback/feedback",
     "pages/info/organize/organize",
     "pages/info/myinfo/myinfo",
-    "pages/info/attend/attend"
+    "pages/info/attend/attend",
+    "pages/info/bonus/bonus",
+    "pages/info/inform_finded/inform_finded"
   ],
   "window":{
     "backgroundTextStyle":"light",

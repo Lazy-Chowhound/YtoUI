@@ -1,7 +1,7 @@
 // pages/user/user.js
 const AV = require('../../utils/av-weapp-min');
 const { User } = require('../../utils/av-weapp-min');
-
+var app = getApp();
 Page({
   data:{
     user: null,
@@ -11,26 +11,10 @@ Page({
   },
 
   onLoad:function(options){
-    console.log(User.current())
+    // console.log(User.current())
     this.setData({
       user: User.current(),
     });
-  },
-
-  onReady:function(){
-    // 页面渲染完成
-  },
-
-  onShow:function(){
-    // 页面显示
-  },
-
-  onHide:function(){
-    // 页面隐藏
-  },
-
-  onUnload:function(){
-    // 页面关闭
   },
 
   updateEmpid: function(e){
@@ -53,12 +37,25 @@ Page({
 
     var usr = this.data.employee;
     var psw = this.data.password;
+    app.globalData.settings.employeeId = this.data.employee;
     if (usr && psw) {
       wx.showLoading({
         title: '正在登录',
       })
+
+      wx.clearStorage('usrname'),
+      wx.clearStorage('passwd')
+      wx.setStorage({
+        key: 'usrname',
+        data: usr,
+      })
+      wx.setStorage({
+        key: 'passwd',
+        data: psw
+      })
+      
       wx.request({
-        url: 'http://www.szpown.xyz:8080/yto/login',
+        url: '../yto/login',
         method: "POST",
         data: {
              phone: usr,
@@ -71,14 +68,15 @@ Page({
           wx.hideLoading()
           wx.showModal({
             title: '提示',
-            content: res.data.reason,
+            content: "登录成功",
           })
+         //存储用户名
         },
         fail: function (res) {
           wx.hideLoading()
           wx.showModal({
             title: '提示',
-            content: res.data.reason,
+            content: "登录失败",
           })
         }
       })      

@@ -64,17 +64,33 @@ Page({
     })
   },
   formSubmit: function (e) {
-    wx.showModal({
-      title: '提示',
-      content: '保存成功',
-      success: function(res) {
-        if (res.confirm) {
-          console.log('用户点击确定')
-        } else if (res.cancel) {
-          console.log('用户点击取消')
-        }
-      }
-    })
     console.log('form发生了submit事件，携带数据为：', e.detail.value)
+    wx.request({
+      url: '../yto/check/apply',
+      method:'POST',
+      data: {
+        date:e.detail.value.date,
+        reason: e.detail.value.reason,
+        duration: e.detail.value.time,
+        remark: e.detail.value.memo,
+      },
+      header: {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      success: function (res) {
+        wx.hideLoading()
+        wx.showModal({
+          title: '提示',
+          content: "提交成功",
+        })
+      },
+      fail: function (res) {
+        wx.hideLoading()
+        wx.showModal({
+          title: '提示',
+          content: "提交失败",
+        })
+      }   
+    })
   }
 })

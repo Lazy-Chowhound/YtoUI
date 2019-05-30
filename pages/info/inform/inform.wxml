@@ -2,10 +2,10 @@
   <view class="search">  
     <view class="search_arr">  
       <icon class="searchcion" size='20' type='search'></icon>  
-      <input class="" placeholder="请输入关键字" placeholder-class='placeholder' value="{{searchValue}}"/>  
+      <input placeholder="请输入关键字" placeholder-class='placeholder' value="{{searchValue}}" bindinput='keywordinput'/> 
     </view>
   </view>  
-  <button class='find'>搜索</button>  
+  <button class='find' bindtap='search'>搜索</button>  
 </view>
 
 <view class="page">
@@ -15,16 +15,16 @@
 </view>
 
 <scroll-view scroll-y="{{isScroll}}" style='height:{{windowHeight}}px'>
-  <block wx:key="item" wx:for="{{data}}">
+  <block wx:key="item" wx:for="{{notice}}">
     <view data-index='{{index}}' class="order-item" bindtouchstart="drawStart" bindtouchmove="drawMove" bindtouchend="drawEnd" style="right:{{item.right}}rpx">
       <view class="weui-grids">
-        <navigator url="../{{item.path}}/{{item.path}}" class="weui-grid" hover-class="weui-grid_active">
+        <navigator url="../information/information?id={{item.id}}" class="weui-grid" hover-class="weui-grid_active">
           <view>
-            <image class="weui-grid__icon" src="../../../image/{{item.icon}}" />
+            <image class="weui-grid__icon" src="../../../image/inform.jpg" />
           </view>
           <view class="weui-grid__label">
             <view class="weui-grid__label_title">{{item.name}}</view>
-            <view class="weui-grid__label_time">{{item.time}}</view>
+            <view class="weui-grid__label_time">{{item.date}}</view>
           </view>
         </navigator>
       </view>

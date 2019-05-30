@@ -1,10 +1,12 @@
 <!-- 反馈页面 -->
-  <view class="weui-tab__content_title" > 
-    <textarea class="content" placeholder="请输入内容" placeholder-class="hint" bindinput="inputContent" />
-  </view>
-  <button class="button"  bindtap="upload"> 
-    <text>确定</text>
-  </button>
+<form bindsubmit='upload'>
+    <view class="weui-tab__content_title" > 
+      <textarea name='content' class="content" placeholder="请输入内容" placeholder-class="hint" bindinput="inputContent" />
+    </view>
+    <button class="button" form-type='submit'> 
+      <text>确定</text>
+    </button>
+  </form>
   
     
 

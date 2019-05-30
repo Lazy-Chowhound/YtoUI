@@ -34,7 +34,8 @@ Page({
   onLoad:function(options){
     // 设置app语言的全局变量
     var selectedLanguage = app.globalData.settings.language;
-    var employeeId = app.globalData.settings.employeeId;
+    var employeeId = wx.getStorageSync('usrname')
+    console.log(employeeId);
     var status = null;
     if(employeeId !== null){
       status = true 
@@ -49,11 +50,10 @@ Page({
     // 页面显示
     var that = this
     wx.getStorage({
-      key: 'userInfo',
+      key: 'usrname',
       success: function(res) {        
         that.setData({
-          user: User.current(),
-          userInfo: res.data
+          employeeId:res.data
         })
       }
     })
@@ -73,6 +73,7 @@ Page({
       icon: "success",
       duration: 1500
     })
+    
     // 更新视图
     this.setData({
       inputStatus: true,
@@ -91,16 +92,17 @@ Page({
       content: content,
       success: function(res) {
         if (res.confirm) {
-          console.log(AV.User.current());
-          AV.User.logOut().then(console.log('Log out'));
-          console.log(AV.User.current());
+          // console.log(AV.User.current());
+          // AV.User.logOut().then(console.log('Log out'));
+          // console.log(AV.User.current());
           that.setData({
-            user: AV.User.current()
+            employeeId:null
           })
         } else if (res.cancel) {
           console.log('用户点击取消')
         }
       }
     })
+   
   }
 })

@@ -22,12 +22,7 @@ Page({
             var data = res.data
             wx.showModal({
               title: '上传文件返回状态',
-              content: '成功',
-              success: function (res) {
-                if (res.confirm) {
-                  console.log('用户点击确定')
-                }
-              }
+              content: '成功',        
             })                          
           },
           fail: function (res) {
@@ -40,39 +35,35 @@ Page({
       }
     })
   },
-  save:function(){
-    wx.showModal({
-      title: '上传文件返回状态',
-      content: '上传成功',
+  save:function(e){
+    wx.request({
+      url: '../yto/info/upload',
+      method: 'POST',
+      data:{
+        title: e.detail.value.title,
+        content: e.detail.value.content,
+        file:'0'
+      },
+      header: {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
       success: function (res) {
-        if (res.confirm) {
-          console.log('用户点击确定')
-        }
+        wx.showModal({
+          title: '上传文件返回状态',
+          content: '上传成功',
+          success: function (res) {
+            if (res.confirm) {
+              console.log('用户点击确定')
+            }
+          }
+        })
+      },
+      fail: function (res) {
+        wx.showModal({
+          title: '提示',
+          content: "加载失败",
+        })
       }
     })    
   }
 })
-
-
-
-
-// bindTextAreaBlur: function(e) {
-//   console.log(e.detail.value);
-//   var that = this;
-//   that.setData({
-//     details: e.detail.value
-//   });
-// },
-
-// ...
-
-// //提交订单或支付订单时清空备注
-// var that = this;
-// that.setData({
-//   details: '',
-// })
-// ---------------------
-//   作者：Arururururu
-// 来源：CSDN
-// 原文：https://blog.csdn.net/unirrrrr/article/details/80723408 
-// 版权声明：本文为博主原创文章，转载请附上博文链接！

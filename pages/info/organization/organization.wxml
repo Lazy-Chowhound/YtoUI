@@ -6,24 +6,13 @@
     <view class='th'>电话</view>
     <view class='th'>工号</view>
   </view>
-  <view class='tr'>
-    <view class='td'>张三</view>
-    <view class='td'>男</view>
-    <view class='td'>33</view>
-    <view class='td'>10076</view>
-    <view class='td'>B16412</view>
-  </view>
-  <view class='tr'>
-    <view class='td'>李四</view>
-    <view class='td'>男</view>
-    <view class='td'>44</view>
-    <view class='td'>10089</view>
-    <view class='td'>B160404</view>
-  </view>
+  <block wx:key="item" wx:for="{{members}}">
+    <view class='tr'>
+      <view class='td'>{{item.name}}</view>
+      <view class='td'>{{item.sex}}</view>
+      <view class='td'>{{item.age}}</view>
+      <view class='td'>{{item.phone}}</view>
+      <view class='td'>{{item.employId}}</view>
+    </view>
+  </block>
 </view>
-
-<!-- 员工不可修改他人信息 -->
-
-<!-- <view class="weui-form-preview__ft">
-  <navigator url="../organize/organize" class="weui-form-preview__btn weui-form-preview__btn_primary" hover-class="weui-form-preview__btn_active">修改    </navigator>
-</view> -->

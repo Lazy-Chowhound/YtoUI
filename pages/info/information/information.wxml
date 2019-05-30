@@ -1,14 +1,16 @@
 <view class="page">
-  <view class="notice">通    知</view>
-  <view class="page__hd">
-    <view class="page__title">{{title}}</view>
-      <view class="page__desc">{{content}}</view>
-    </view>              
-    <view class="weui-form-preview__ft">
-      <navigator url="../inform/inform" class="weui-form-preview__btn weui-form-preview__btn_primary" hover-class="weui-form-preview__btn_active">返回</navigator>
-    </view>
-    <view class="weui-form-preview__ft">
-      <navigator url="../feedback/feedback" class="weui-form-preview__btn weui-form-preview__btn_primary" hover-class="weui-form-preview__btn_active">留言</navigator>
-    </view>
-    <view class="read">已读{{num}}人</view>
+  <block  wx:key="item" wx:for="{{data}}">
+    <view class="notice">通    知</view>
+    <view class="page__hd">
+      <view class="page__title">{{item.date}}</view>
+        <view class="page__desc">{{item.content}}</view>
+      </view>              
+      <view class="weui-form-preview__ft">
+        <navigator url="../inform/inform" class="weui-form-preview__btn weui-form-preview__btn_primary" hover-class="weui-form-preview__btn_active">返回</navigator>
+      </view>
+      <view class="weui-form-preview__ft">
+        <navigator url="../feedback/feedback" class="weui-form-preview__btn weui-form-preview__btn_primary" hover-class="weui-form-preview__btn_active">留言</navigator>
+      </view>
+      <view class="read">已读{{item.read}}人</view>
+  </block>
 </view>

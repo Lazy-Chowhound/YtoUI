@@ -20,7 +20,9 @@ Page({
       [{id: "clockIn", msg: "Clock In"}, {id: "clockOut", msg: "Clock Out"}],
       [{id: "clockIn", msg: "出勤"}, {id: "clockOut", msg: "退勤"}],
       
-    ],      
+    ],  
+    location: null,
+    type: null,    
     loading: false, // 更新地理位置加载状态
     checkMode: {},
     UI: [
@@ -58,7 +60,9 @@ Page({
           UI: ui,          
           latitude: lat,
           longitude: lon,
-          loading: false
+          loading: false,
+          location: data[0].name,
+          type:"上班",
         })  
       }
     })
@@ -88,9 +92,18 @@ Page({
   },
   bindPickerChange:function(e){
     // 页面隐藏
-    this.setData({
-      index: e.detail.value
-    })
+    if (e.detail.value=='0'){
+      this.setData({
+        index: e.detail.value,
+        type: "上班",
+      })
+    }
+    else{
+      this.setData({
+        index: e.detail.value,
+        type: "下班",
+      })
+    }
   },
   relocate: function(){
     this.setData({      
@@ -121,35 +134,60 @@ Page({
         })  
       }
     })
-    
   },
   formSubmit: function(e){
     var that = this;
-    if(AV.User.current() !== null){
+    // if(AV.User.current() !== null){
       // 有账户绑定时
-      var acl = new AV.ACL();
-      acl.setPublicReadAccess(false);
-      acl.setPublicWriteAccess(false);
-      acl.setReadAccess(AV.User.current(), true);
-      acl.setWriteAccess(AV.User.current(), true);
+      // var acl = new AV.ACL();
+      // acl.setPublicReadAccess(false);
+      // acl.setPublicWriteAccess(false);
+      // acl.setReadAccess(AV.User.current(), true);
+      // acl.setWriteAccess(AV.User.current(), true);
 
-      var currentTime = new Date();
-      console.log(that.data.latitude)
-      console.log(that.data.longitude)
-      var currentLocation = new AV.GeoPoint(that.data.latitude, that.data.longitude);
-      console.log(currentLocation)
-      // store the check
-      new Check({
-        timestamp: currentTime,
-        checkType: e.detail.value.type,
-        location: e.detail.value.name,
-        address: e.detail.value.address,
-        user: AV.User.current(),
-        geo: currentLocation
-      }).setACL(acl).save().then(wx.navigateTo({
-        url: '../history/history'
-      })); 
-
+      // var currentTime = new Date();
+      // // console.log(that.data.latitude)
+      // // console.log(that.data.longitude)
+      // var currentLocation = new AV.GeoPoint(that.data.latitude, that.data.longitude);
+      // // console.log(currentLocation)
+      // // store the check
+      // new Check({
+      //   timestamp: currentTime,
+      //   checkType: e.detail.value.type,
+      //   location: e.detail.value.name,
+      //   address: e.detail.value.address,
+      //   user: AV.User.current(),
+      //   geo: currentLocation
+      // }).setACL(acl).save().then(wx.navigateTo({
+      //   url: '../history/history'
+      // })); 
+    var usr = wx.getStorageSync('usrname');
+    if(usr!=null){
+      wx.request({
+        url: '../yto/check/clock_in',
+        method: "POST",
+        data: {
+          type:this.data.type,
+          location:this.data.location,
+        },
+        header: {
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        success: function (res) {
+          wx.hideLoading()
+          wx.showModal({
+            title: '提示',
+            content: "提交成功",
+          })
+        },
+        fail: function (res) {
+          wx.hideLoading()
+          wx.showModal({
+            title: '提示',
+            content: "提交失败",
+          })
+        }
+      })
     }else{
       // 无账户绑定
       wx.showModal({
@@ -168,6 +206,6 @@ Page({
         }
       })      
     }
-
+  // }
   }
 })

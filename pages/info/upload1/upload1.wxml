@@ -1,16 +1,17 @@
+<form bindsubmit='save'>
   <view class="label">
-    <input type="text" placeholder="请输入标题" placeholder-class="hint" bindinput="inputTitle"/>
+    <input name='title' type="text" placeholder="请输入标题" placeholder-class="hint" bindinput="inputTitle"/>
   </view>
   <view class="weui-tab__content_title" > 
-    <textarea class="content" placeholder="请输入内容" placeholder-class="hint" bindinput="inputContent" />
+    <textarea name='content' class="content" placeholder="请输入内容" placeholder-class="hint" bindinput="inputContent" />
   </view>
   <button class="button"  bindtap="upload"> 
     <image class='btnImg' src='../../../../../image/appendix.png'></image>
     <text>添加附件</text>
   </button>
-  <button class="button"  bindtap="save">
+  <button class="button" form-type='submit'>
     <image class='btnImg' src='../../../../../image/upload.png'></image>
     <text decode='true'>上&emsp;&emsp;传</text>
   </button>
-    
+</form> 
 

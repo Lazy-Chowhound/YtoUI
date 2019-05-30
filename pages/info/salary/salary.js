@@ -1,11 +1,13 @@
-var sliderWidth = 96; // 需要设置slider的宽度，用于计算中间位置
+var sliderWidth = 96; 
 
 Page({
     data: {
         tabs: ["月薪", "奖金"],
         activeIndex: 0,
         sliderOffset: 0,
-        sliderLeft: 0
+        sliderLeft: 0,
+        salary: [{ month: '2018/8' }, { month: '2018/9' }, { month: '2018/10' }],
+        bonus: [{ month: '2018/8' }, { month: '2018/9' }, { month: '2018/10' }],
     },
     onLoad: function () {
         var that = this;
@@ -17,6 +19,43 @@ Page({
                 });
             }
         });
+        wx.request({
+          url: '../yto/info/salary',
+          method:'GET',
+          header: {
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          success: function (res) {
+            this.setData({
+              salary:res.data,          
+            })
+          },
+          fail: function (res) {
+            wx.showModal({
+              title: '提示',
+              content: "加载失败",
+            })
+          }
+        })
+
+      wx.request({
+        url: '../yto/info/bonus',
+        method: 'GET',
+        header: {
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        success: function (res) {
+          this.setData({
+            bonus: res.data,
+          })
+        },
+        fail: function (res) {
+          wx.showModal({
+            title: '提示',
+            content: "加载失败",
+          })
+        }
+      })
     },
     tabClick: function (e) {
         this.setData({

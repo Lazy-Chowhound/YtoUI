@@ -1,0 +1,17 @@
+<scroll-view scroll-y="{{isScroll}}" style='height:{{windowHeight}}px'>
+  <block wx:key="item" wx:for="{{notice_finded}}">
+    <view data-index='{{index}}' class="order-item" bindtouchstart="drawStart" bindtouchmove="drawMove" bindtouchend="drawEnd" style="right:{{item.right}}rpx">
+      <view class="weui-grids">
+        <navigator url="../information/information?id={{item.id}}" class="weui-grid" hover-class="weui-grid_active">
+          <view>
+            <image class="weui-grid__icon" src="../../../image/inform.jpg" />
+          </view>
+          <view class="weui-grid__label">
+            <view class="weui-grid__label_title">{{item.name}}</view>
+            <view class="weui-grid__label_time">{{item.date}}</view>
+          </view>
+        </navigator>
+      </view>
+    </view>
+  </block>
+</scroll-view>
